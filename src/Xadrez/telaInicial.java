@@ -95,7 +95,8 @@ public class TelaInicial extends JFrame implements ActionListener{
             
         }
         if(e.getSource()==botao2){
-            System.out.println("cookie");
+            new Jogo(jog1.getText(),jog2.getText());
+            this.dispose();
         }
     }
 
