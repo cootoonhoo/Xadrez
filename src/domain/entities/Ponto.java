@@ -4,7 +4,7 @@ public class Ponto {
     private int x;
     private int y;
 
-    public Ponto(int x) {
+    public Ponto(int x, int y) {
         this.x = x;
         this.y = y;
     }
@@ -15,5 +15,10 @@ public class Ponto {
 
     public int getY() {
         return y;
+    }
+
+    @Override
+    public String toString() {
+        return "(" + x + ", " + y + ")";
     }
 }

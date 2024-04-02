@@ -1,9 +1,14 @@
 package presentation;
 
+import domain.entities.Ponto;
+import domain.entities.pecas.*;
+import domain.enums.Cor;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 public class MainGame extends JFrame implements ActionListener{
     final ImageIcon image = new ImageIcon(getClass().getClassLoader().getResource("./images/rei.png"));
@@ -21,6 +26,7 @@ public class MainGame extends JFrame implements ActionListener{
     final JLabel lblTitulo = new JLabel();
     final JLabel lblJogador2 = new JLabel();
     public MainGame(){
+
         //Label da tela
         lblTitulo.setText("Xadrez");
         lblTitulo.setFont(new Font("Tahoma",Font.BOLD,70));
@@ -86,7 +92,8 @@ public class MainGame extends JFrame implements ActionListener{
 
         }
         if(e.getSource()== btnConfirmar){
-            // Implementar lógica de iniciar o jogo
+            String jogador1 = jog1.getText();
+            String jogador2 = jog2.getText();
             this.dispose();
         }
     }
